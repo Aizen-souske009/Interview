@@ -24,3 +24,23 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Blur Text Link Styles */
+.blur-text-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.blur-text-link .blur-text-content {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
+
+.blur-text-link:hover .blur-text-content,
+.blur-text-link.active .blur-text-content {
+  filter: blur(0px);
+}
